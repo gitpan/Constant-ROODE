@@ -1,0 +1,74 @@
+Constant version 0.04
+=====================
+
+NOTE: This module (Constant.pm) is not to be confused with the
+built-in perl pragma (constant.pm), although they perform similar
+functions.  Apologies if you landed here by mistake.
+
+
+DESCRIPTION
+
+Constant.pm provides a facility for creating non-modifiable scalars,
+arrays, and hashes.
+
+Perl provides a built-in mechanism (the "use constant" pragma) to
+create constant scalars and lists.  This mechanism has several
+limitations, however:
+
+    It creates only scalars and lists.
+    It creates "variables" that have no leading $ character.
+    The variables it creates cannot be interpolated into strings.
+    It works only at compile time.
+    The variables it creates are global, never lexical.
+    Sometimes you have to be careful with your syntax when using them.
+
+Constant.pm, by contrast:
+
+    Creates scalars, arrays (not lists), and hashes.
+    Creates variables that look and work like native perl variables.
+    Creates global or lexical variables.
+    Works at runtime or compile time.
+
+EXAMPLES OF USE
+
+    Constant::Scalar $a => "A string value";
+    Constant::Array @a  => (1, 2, 3, 4);
+    Constant::Hash %a   => (key1 => 'value1', key2 => 'value2');
+
+If the program subsequently tries to modify $a, @a, or %a, the program
+will die with an error message.
+
+
+INSTALLATION
+
+To install this module, do the standard Perl module four-step:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+
+DEVELOPMENT STATE
+
+Officially "beta", hence the 0.x version number.  It is essentially
+complete, however, and will be changed to 1.0 if no bugs are reported
+for a while.
+
+
+DEPENDENCIES
+
+None.  Well, Carp.pm, but that comes with Perl.
+
+
+COPYRIGHT AND LICENCE
+
+Eric J. Roode, eric@myxa.com
+
+Copyright (c) 2001-2002 by Eric J. Roode. All Rights Reserved.  This module
+is free software; you can redistribute it and/or modify it under the
+same terms as Perl itself.
+
+If you have suggestions for improvement, please drop me a line.  If
+you make improvements to this software, I ask that you please send me
+a copy of your changes. Thanks.
