@@ -1,5 +1,8 @@
 Revision history for Perl extension Constant.
 
+0.05  2003 January 8
+	- Change documentation to indicate that this module is DEPRECATED.
+
 0.04  2002 March 7
 	- Add top-level Scalar, Array, and Hash functions, so callers
 	  don't have to tie the variables themselves.

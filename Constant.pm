@@ -1,7 +1,7 @@
 # Package for defining constants of various types
 
 use strict;
-$Constant::VERSION = 0.04;    # Also change in the documentation!
+$Constant::VERSION = 0.05;    # Also change in the documentation!
 
 
 # ----------------
@@ -220,6 +220,12 @@ Constant - Facility for creating read-only scalars, arrays, hashes.
 =head1 VERSION
 
 This documentation describes version 0.04 of Constant.pm, Mar 7, 2002.
+Re-versioned to 0.05 during deprecation.
+
+Please note that this module is B<deprecated> as of January 2003.  You
+should look into the C<Readonly> module, which is a newer incarnation
+of this module, more stable and with more features.  C<Constant> still
+works, but you are encouraged to migrate to C<Readonly>.
 
 =head1 SYNOPSIS
 
@@ -349,6 +355,17 @@ program, if you like:
  Scalar
  Array
  Hash
+
+=head1 BUGS / LIMITATIONS
+
+Do not use this module under Windows or any other system that uses
+case-insensitive filenames.  Perl on such systems cannot distinguish
+between "use Constant" and "use constant", because the system cannot
+distinguish between C<Constant.pm> and C<constant.pm>.
+
+This module was renamed to C<Readonly> in March of 2002, and that is
+where development has continued.  You are strongly encouraged to use
+C<Readonly> instead of C<Constant>.
 
 =head1 REQUIREMENTS
 

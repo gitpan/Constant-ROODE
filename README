@@ -1,5 +1,13 @@
-Constant version 0.04
+Constant version 0.05
 =====================
+
+IMPORTANT NOTE: This module is officially DEPRECATED as of January
+2003.  It has been renamed to Readonly, and development has continued
+under that name.  You are strongly encouraged to migrate to Readonly.
+Readonly is more robust and has more features; Constant has a name
+conflict under Windows (and presumably other systems with case-
+insensitive filesystems).
+
 
 NOTE: This module (Constant.pm) is not to be confused with the
 built-in perl pragma (constant.pm), although they perform similar
@@ -51,9 +59,9 @@ To install this module, do the standard Perl module four-step:
 
 DEVELOPMENT STATE
 
-Officially "beta", hence the 0.x version number.  It is essentially
-complete, however, and will be changed to 1.0 if no bugs are reported
-for a while.
+DEPRECATED.  If you currently use Constant, please migrate to Readonly.
+If you are investigating the features of Constant, please look into the
+Readonly module.
 
 
 DEPENDENCIES
